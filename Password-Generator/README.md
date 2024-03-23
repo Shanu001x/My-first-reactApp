@@ -33,15 +33,15 @@ To run the app locally, follow these steps:
 Deployment
 
 To deploy the app, you can use a service like GitHub Pages, Netlify, or Vercel.
+
 Authors and Contributors
 
-This project was created and maintained by [Your Name].
-
+This project was created and maintained by Shanu(self).
 Feel free to submit a pull request or open an issue if you'd like to contribute. 
-
 Special thanks to the React documentation and community for providing resources and guidance.
+
 Contact
 
 If you have any questions or feedback, you can reach me at sraw419@gmail.com
 
-Thank you for using the password generator!
+Thank you for using the password generator.
