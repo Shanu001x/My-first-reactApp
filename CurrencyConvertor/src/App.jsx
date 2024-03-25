@@ -20,8 +20,8 @@ function App() {
   const convert = () => {
     setConvertedAmount(amount*currencyinfo[to])
   }
-
   return (
+
     <div
     className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
     style={{
@@ -55,14 +55,15 @@ function App() {
                         swap
                     </button>
                 </div>
-                <div className="w-full mt-1 mb-4">
+                <div className="w-full mt-1 mb-">
                     <InputBox
                         label="To"
                         amount={convertedAmount}
                         currencyOptions={options}
                         onCurrencyChange={(currency)=> setTo(currency)}
-                        selectCurrency={from}
+                        selectCurrency={to}
                         amountDisable
+                        
                         
                     />
                 </div>
