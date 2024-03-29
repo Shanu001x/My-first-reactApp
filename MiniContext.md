@@ -1,4 +1,4 @@
-  In this project we are learning how to use conext APi with this mini project. in this project we are simply trying to share data between components from top to down manner without using props on every single different level with the help and use case of context API.  
+  In this project we are learning how to use context APi with this mini project. in this project we are simply trying to share data between components from top to down manner without using props on every single different level with the help and use case of context API.  
 
 *Some tutorial knowledge of Context API *
 
