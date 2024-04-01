@@ -8,9 +8,9 @@ function TodoForm() {
     const add = (e)=> {
         e.preventDefault()
 
-        if(!todo) return
+        if(!todo) return //this line ensure not to add empty todo in list item. 
 
-        addTodo({ todo, completed: false})
+        addTodo({ todo, completed: false}) 
         setTodo("")
     }
 

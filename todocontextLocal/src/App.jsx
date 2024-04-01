@@ -8,16 +8,19 @@ function App() {
 
   const addTodo = (todo) => {
     setTodos((prev) => [...prev, { id: Date.now(), ...todo }]);
+    console.log(addTodo,todo)
   };
 
   const updateTodo = (id, todo) => {
     setTodos((prev) =>
       prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo))
     );
+    console.log(updateTodo)
   };
 
   const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
+    console.log(deleteTodo)
   };
 
   const toggleComplete = (id) => {
@@ -28,6 +31,7 @@ function App() {
           : prevTodo
       )
     );
+    console.log(toggleComplete)
   };
 
   useEffect(() => {

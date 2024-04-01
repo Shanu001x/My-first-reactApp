@@ -26,9 +26,10 @@ function TodoItem({ todo }) {
             <input
                 type="checkbox"
                 className="cursor-pointer"
-                checked={todo.completed}
+                checked={todo.completed} // if checked then todo.completed  is true. 
                 onChange={toggleCompleted}
             />
+            {/* Editable Input box  */}
             <input
                 type="text"
                 className={`border outline-none w-full bg-transparent rounded-lg ${
