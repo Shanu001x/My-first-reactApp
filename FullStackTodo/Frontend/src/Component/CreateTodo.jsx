@@ -1,52 +1,55 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function CreateTodo() {
-  const [title, settitle] = useState("");
-  const [description, setdescription] = useState("");
+function CreateTodo({ onTodoCreated }) {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleCreateTodo = () => {
+    fetch('/todo', {
+      method: 'POST',
+      body: JSON.stringify({ title, description }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(async response => {
+        if (response.ok) {
+          onTodoCreated();
+          setTitle('');
+          setDescription('');
+          alert('Todo added');
+        } else {
+          alert('Error creating todo');
+        }
+      })
+      .catch(error => {
+        console.error('Error creating todo:', error);
+        alert('Error creating todo');
+      });
+  };
 
   return (
     <div>
       <input
         id="title"
-        onChange={(e) => {
-          settitle(e.target.value);
-        }}
+        onChange={e => setTitle(e.target.value)}
         style={{ margin: 10, padding: 10 }}
         type="text"
         placeholder="title"
-      />{" "}
+        value={title}
+      />
       <br />
       <input
         id="desc"
-        onChange={(e) => {
-          setdescription(e.target.value);
-        }}
+        onChange={e => setDescription(e.target.value)}
         style={{ margin: 10, padding: 10 }}
         type="text"
         placeholder="description"
-      />{" "}
+        value={description}
+      />
       <br />
       <br />
-      <button
-        onClick={() => {
-          fetch("http://localhost:3000/todo",  {
-            method: "POST",
-            body: JSON.stringify({
-              title: title,
-              description: description,
-            }),
-            headers: {
-              "content-type": "application/json",
-            }
-
-          })
-           .then(async function(res) {
-              const json = res.json();
-              alert("todo added");
-            });
-        }}
-        style={{ margin: 10, padding: 10 }}
-      >
+      <button onClick={handleCreateTodo} style={{ margin: 10, padding: 10 }}>
         Add a todo
       </button>
     </div>

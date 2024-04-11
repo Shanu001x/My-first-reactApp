@@ -32,14 +32,19 @@ app.post("/todo", async function(req, res) {
     })
 })
 
-app.get("/todos", async function(req, res) {
-    // const todos = await todo.find({});
-
-    res.json({
-        todos: []
-    })
-
-})
+app.get("/todos", async function(_req_, _res_) {
+    try {
+      const todos = await todo.find({});
+      _res_.json({
+        todos: todos,
+      });
+    } catch (error) {
+      _res_.status(500).json({
+        msg: "Error fetching todos",
+        error: error.message,
+      });
+    }
+  });
 
 app.put("/completed", async function(req, res) {
     const updatePayload = req.body;
