@@ -5,9 +5,12 @@ function CreateTodo({ onTodoCreated }) {
   const [description, setDescription] = useState('');
 
   const handleCreateTodo = () => {
-    fetch('/todo', {
+    fetch('http://localhost:3000/todo', {
       method: 'POST',
-      body: JSON.stringify({ title, description }),
+      body: JSON.stringify({
+         title: title, 
+         description: description
+         }),
       headers: {
         'Content-Type': 'application/json',
       },

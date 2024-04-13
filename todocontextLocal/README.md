@@ -1,8 +1,44 @@
-# React + Vite
+# REACT PROJECT
+## todocontextLocal
+### Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this Project we Are going to make a todo application using react and trying to use optimise approach of context API for state management. And we Will Use Local Storage to save the data in browser storage so that even if user refreshes or closes the tab, The data will still be there.
 
-Currently, two official plugins are available:
+### Project Structure
+#### Folder Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project follows a clear folder structure:
+
+- src: Contains the application source code.
+- Component: Holds the React components used in the application.
+- TodoItem.jsx: Component for displaying a single todo item.
+- Todoform.jsx: Component for displaying the todo form.
+- Context: Contains the context providers for managing application state.
+- AddTodoContext.js: Context provider for managing the add todo state.
+- index.js: Exports all the components and hooks for easy import.
+- App.jsx: Main entry point of the application.
+- vite.svg: Icon for the Vite development server.
+
+## JavaScript
+
+- JavaScript is used for writing the logic of the application. It can be run on any browser or environment that supports HTML, CSS, or JavaScript.
+
+## CSS
+
+Tailwind CSS is used for styling the application, providing a utility-first CSS framework.
+
+## Development Guide
+### Prerequisites
+
+Before starting the development, ensure you have the following tools installed:
+- Node.js 
+- npm 
+- Vite 
+
+
+### Getting Started with Create React App
+
+- npm Create Vite@latest
+- Choosen Features: React, javaScript.
+- For Styling - Installed Tailwind CSS.
+- Installation finished. Now what?
