@@ -9,7 +9,7 @@
 Before the Context API, the most common way to manage global state was to use a library like Redux or MobX. However, these libraries can be complex and require a lot of boilerplate code. With the Context API, you can manage global state in a simpler way, without the need for a third-party library.
 
 
-Code Example - How to create it userContext
+Code Example - How to create userContext
 
 import React from "react";
 

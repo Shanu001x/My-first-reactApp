@@ -1,0 +1,32 @@
+/* Todos.css */
+.item {
+    @apply w-full px-3 py-2 mb-3 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+  }
+  
+  .item.completed {
+    @apply line-through bg-yellow-100;
+  }
+  
+  .complete-btn {
+    @apply bg-red-500 text-white py-2 px-4 rounded mr-2 mt-2 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+  
+  .complete-btn.completed {
+    @apply bg-green-500 text-white hover:bg-green-700;
+  }
+  
+  .remove-btn {
+    @apply bg-red-500 text-white py-2 px-4 rounded mr-2 mt-2 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+  
+  .save-btn {
+    @apply bg-blue-500 text-white py-2 px-4 rounded mt-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .edit-btn {
+    @apply bg-gray-800 text-white py-2 px-4 rounded mt-2 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2;
+  }
+  
+  .edit-btn.disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
