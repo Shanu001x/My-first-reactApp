@@ -25,7 +25,13 @@ cosnt submit = async (data) => {
         const file = data.image[0]? appwriteService.uploadFile(data.image[0]): null
         if (file) {
            appwriteService.deleteFile(post.featuredImage)
-           const dbPost  = 
+           const dbPost  = await appwriteService.updatePost(post.$id, {
+            ...data, 
+            featuredImage: file ? file.$id : undefined,
+           if (dbPost) {
+            navigate(`post/${dbPost.$id}`)
+           }
+           })
         }
     }
 }
